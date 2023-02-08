@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "Sig's Dimming Selector",
+  "version": "1.0",
+
+  "description": "Dims the screen when highlighting content.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["sig-selector.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "permissions": [
+    "<all_urls>"
+  ]
+}
